@@ -1,5 +1,5 @@
 import React from 'react';
-import { Menu, Search } from "semantic-ui-react";
+import { Menu } from "semantic-ui-react";
 import { Link } from 'react-router-dom';
 
 import { getAuth, onAuthStateChanged, signOut } from 'firebase/auth';
@@ -19,9 +19,6 @@ function Header() {
   return (
     <Menu>
       <Menu.Item as={Link} to="/">React</Menu.Item>
-      <Menu.Item>
-        <Search />
-      </Menu.Item>
       <Menu.Menu position="right">
         {user ? (
           <>
